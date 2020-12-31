@@ -1,0 +1,10 @@
+# howto: https://github.com/tigergraph/ecosys/blob/master/demos/guru_scripts/docker/README.md?utm_campaign=2018%20Developer%20Edition&utm_source=hs_automation&utm_medium=email&utm_content=63627934&_hsenc=p2ANqtz-_p-m9gLpZfLI7vVIly6mcqPcV-pIMIqhqapwQbykbc0KCDp7OxolsAKntLSsLT86El9KhclGZ13q6FqDu18qSWbrg_9g4eRlZ8RjK8oqKnQJ_hJcE&_hsmi=63627934
+
+docker run -d -p 14023:22 -p 9000:9000 -p 14241:14240 --name tigergraph_chain --ulimit nofile=1000000:1000000 -v ~/data:/home/tigergraph/mydata -t docker.tigergraph.com/tigergraph-dev:latest
+
+ssh -p 14023 tigergraph@localhost
+    pass: tigergraph
+
+gadmin start
+
+http://localhost:14241/#/home
